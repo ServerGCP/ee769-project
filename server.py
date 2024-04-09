@@ -14,6 +14,10 @@ PROCESS_FOLDER = os.path.join(UPLOAD_FOLDER, 'processed')
 app.config['PROCESS_FOLDER'] = UPLOAD_FOLDER
 os.makedirs(PROCESS_FOLDER, exist_ok=True)
 
+@app.route('/', methods=['GET', 'POST'])
+def hello_world():
+    return jsonify({'success': 'Flask running'}), 400
+    
 @app.route('/process', methods=['POST'])
 def process_image():
     try:
