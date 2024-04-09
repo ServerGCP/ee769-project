@@ -3,11 +3,11 @@ from flask import Flask, request, jsonify, send_file
 from werkzeug.utils import secure_filename
 import PIL, io, os, cv2, sys
 import requests, threading
-from pyngrok import ngrok
+# from pyngrok import ngrok
 import streamlit as st
 
-ngrok.set_auth_token("2R5xx7TIhctmQQkhQdZ9DtEec8A_67VPE7NwzQSS5BEvN9aww")
-public_url = ngrok.connect(5000)
+# ngrok.set_auth_token("2R5xx7TIhctmQQkhQdZ9DtEec8A_67VPE7NwzQSS5BEvN9aww")
+# public_url = ngrok.connect(5000)
 app = Flask(__name__)
 
 UPLOAD_FOLDER = 'uploads'
@@ -56,7 +56,7 @@ flask_thread = threading.Thread(target=run_flask)
 flask_thread.start()
 
 st.title('EE769 Course Project')
-st.markdown(public_url, unsafe_allow_html=True)
+# st.markdown(public_url, unsafe_allow_html=True)
 
 image = st.file_uploader("Choose an image...", type=['jpg', 'jpeg', 'png'])
 if image is not None:
