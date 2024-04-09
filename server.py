@@ -1,7 +1,7 @@
 from processing import check_valid, draw_bbox, img_display
 from flask import Flask, request, jsonify, send_file
 from werkzeug.utils import secure_filename
-from flask_ngrok2 import run_with_ngrok
+# from flask_ngrok2 import run_with_ngrok
 import PIL, io, os, cv2, sys
 import requests, threading
 # from pyngrok import ngrok
@@ -54,7 +54,7 @@ def run_flask():
     app.run()
 
 flask_thread = threading.Thread(target=run_flask)
-run_with_ngrok(app=app, auth_token='2R5xx7TIhctmQQkhQdZ9DtEec8A_67VPE7NwzQSS5BEvN9aww')
+# run_with_ngrok(app=app, auth_token='2R5xx7TIhctmQQkhQdZ9DtEec8A_67VPE7NwzQSS5BEvN9aww')
 flask_thread.start()
 
 st.title('EE769 Course Project')
