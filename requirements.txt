@@ -1,4 +1,5 @@
 flask
 pyngrok
 scikit-image
+flask_ngrok2
 opencv-python-headless
