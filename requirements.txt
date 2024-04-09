@@ -1,3 +1,4 @@
 flask
+pyngrok
 scikit-image
 opencv-python-headless
